@@ -72,7 +72,7 @@ h1 {
     margin-top: 70px;
     margin-left: auto;
     margin-right: auto;
-    background: url(Homelogo_IMG1.png) no-repeat;
+    background: url(../images/Homelogo_IMG1.png) no-repeat;
     width: 800px;
     height: 200px;
     text-indent: -9999px;
@@ -80,7 +80,7 @@ h1 {
 }
 
 h1:hover {
-    background-image: url(Homelogo_IMG1h.png);
+    background-image: url(../images/Homelogo_IMG1h.png);
 }
 
 #edit {
@@ -165,7 +165,7 @@ small {
     h1 {
         margin-left: auto;
         margin-right: auto;
-        background: url(Homelogo_IMG2.png) no-repeat;
+        background: url(../images/Homelogo_IMG2.png) no-repeat;
         width: 600px;
         height: 150px;
         margin-bottom: 72px;
@@ -173,6 +173,6 @@ small {
     }
 
     h1:hover {
-        background-image: url(Homelogo_IMG2h.png);
+        background-image: url(../images/Homelogo_IMG2h.png);
     }
 }
