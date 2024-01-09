@@ -25,11 +25,11 @@ UserLogic::logout();
 </head>
 
 <body>
-    <a href="home.html">
+    <a href="home.php">
         <h1 class="header-logo">NewRCode</h1>
     </a>
     <h2>ログアウト</h2>
-    <p>ログアウトしました。</p>
+    <p id="login">ログアウトしました。</p>
 
     <button onclick="location.href='login_form.php'">ログインする</button>
 </body>

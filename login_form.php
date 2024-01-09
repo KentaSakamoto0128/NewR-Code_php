@@ -25,7 +25,7 @@ session_destroy();
 </head>
 
 <body>
-    <a href="home.html">
+    <a href="home.php">
         <h1 class="header-logo">NewRCode</h1>
     </a>
     <h2>ログイン</h2>
@@ -54,7 +54,7 @@ session_destroy();
         </div>
         <input type="submit" value="ログイン">
     </form>
-    <button onclick="location.href='home.html'">ホームに戻る</button>
+    <button onclick="location.href='home.php'">ホームに戻る</button>
 
     <p>はじめての方は<a href="signup_form.php">こちら</a></p>
 </body>

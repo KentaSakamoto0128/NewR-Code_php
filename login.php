@@ -37,12 +37,12 @@ if (!$result) {
 </head>
 
 <body>
-    <a href="home.html">
+    <a href="home.php">
         <h1 class="header-logo">NewRCode</h1>
     </a>
     <h2>ログイン</h2>
     <h3>ログインしました。</h3>
-    <button onclick="location.href='home.html'">ホームに戻る</button>
+    <button onclick="location.href='home.php'">ホームに戻る</button>
     <button onclick="location.href='mypage.php'">マイページへ</button>
 </body>
 

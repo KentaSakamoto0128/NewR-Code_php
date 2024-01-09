@@ -48,7 +48,7 @@ unset($_SESSION['login_err']);
 </head>
 
 <body>
-    <a href="home.html">
+    <a href="home.php">
         <h1 class="header-logo">NewRCode</h1>
     </a>
     <h2>新規登録</h2>
@@ -92,7 +92,7 @@ unset($_SESSION['login_err']);
         <p><input type="hidden" name="csrf_token" value="<?php echo h(setToken()); ?>"></p>
         <input value="新規登録" type="submit" onclick="return check()">
     </form>
-    <button onclick="location.href='home.html'">ホームに戻る</button>
+    <button onclick="location.href='home.php'">ホームに戻る</button>
     <p id="login">アカウントをお持ちの方は<a href="login_form.php">こちら</a></p>
 </body>
 

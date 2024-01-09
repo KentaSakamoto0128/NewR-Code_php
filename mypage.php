@@ -24,16 +24,16 @@ $login_user = $_SESSION['login_user'];
 </head>
 
 <body>
-    <a href="home.html">
+    <a href="home.php">
         <h1 class="header-logo">NewRCode</h1>
     </a>
     <h2>マイページ</h2>
-    <p><?php echo h($login_user['name']) ?>さんでログインしています
+    <p id="login"><?php echo h($login_user['name']) ?>さんでログインしています
     </p>
-    <p>メールアドレス:<?php echo h($login_user['email']) ?>
+    <p id="login">メールアドレス:<?php echo h($login_user['email']) ?>
     </p>
 
-    <button onclick="location.href='home.html'">ホームに戻る</button>
+    <button onclick="location.href='home.php'">ホームに戻る</button>
     <form action="logout.php" method="POST">
         <input type="submit" name="logout" value="ログアウト" name="logout">
     </form>
