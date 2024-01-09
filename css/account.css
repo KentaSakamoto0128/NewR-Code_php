@@ -38,7 +38,7 @@ h3#subtitle {
 
 h3 {
     color: #fff;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 form p {
@@ -117,10 +117,10 @@ form p {
 
 button {
     font-weight: bold;
-    width: 200px;
-    height: 40px;
-    margin-top: 5px;
-    font-size: 30px;
+    width: 180px;
+    height: 35px;
+    margin-bottom: 5px;
+    font-size: 25px;
     border: none;
     color: #000;
     background-color: #d7d7d7;
@@ -134,9 +134,10 @@ button:hover {
 
 input[type='submit'] {
     font-weight: bold;
-    width: 200px;
-    height: 50px;
-    font-size: 30px;
+    width: 180px;
+    height: 35px;
+    margin-bottom: 5px;
+    font-size: 25px;
     border: none;
     color: #000;
     background-color: #d7d7d7;
@@ -150,6 +151,11 @@ input[type='submit']:hover {
 
 p#login {
     color: #fff;
+}
+
+fieldset.confirmcb {
+    padding-bottom: 0;
+    padding-top: 0;
 }
 
 .confirmcb {
