@@ -13,7 +13,7 @@
     </a>
     <h2>ログイン</h2>
     <div id="alert"></div>
-    <form>
+    <form method="POST" action="welcome.html">
         <h3>ユーザーID</h3>
         <div class="input-detail">
             <label class="ef">
@@ -23,8 +23,7 @@
         <h3>パスワード</h3>
         <div class="input-detail">
             <label class="ef">
-                <input type="password" id="pw1" placeholder="パスワード" minlength="8" maxlength="20"
-                    pattern="^[a-zA-Z0-9]+$" required="required"><br></label>
+                <input type="password" id="pw1" placeholder="パスワード" minlength="8" maxlength="20" pattern="^[a-zA-Z0-9]+$" required="required"><br></label>
         </div>
         <button onclick="location.href='home.html'">ホームに戻る</button>
         <input type="submit" value="ログイン">
