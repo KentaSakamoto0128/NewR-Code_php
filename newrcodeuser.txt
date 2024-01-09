@@ -1,0 +1,3 @@
+username:newrcode
+hostname:localhost
+password:newrsite
