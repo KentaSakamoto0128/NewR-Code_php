@@ -4,6 +4,13 @@ session_start();
 require_once 'functions.php';
 require_once 'UserLogic.php';
 
+// ワンタイムトークン生成
+$toke_byte = openssl_random_pseudo_bytes(16);
+$csrf_token = bin2hex($toke_byte);
+
+// トークンをセッションに保存
+$_SESSION['csrf_token'] = $csrf_token;
+
 //ログイン判定
 $result = UserLogic::checkLogin();
 if ($result) {
@@ -89,7 +96,7 @@ unset($_SESSION['login_err']);
                 <input type="checkbox" id="confirm" required="required">入力内容を確認しました。
             </label>
         </fieldset>
-        <p><input type="hidden" name="csrf_token" value="<?php echo h(setToken()); ?>"></p>
+        <input type="hidden" name="csrf_token" value="<?php echo h($csrf_token); ?>" />
         <input value="新規登録" type="submit" onclick="return check()">
     </form>
     <button onclick="location.href='home.php'">ホームに戻る</button>

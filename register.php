@@ -2,9 +2,11 @@
 session_start();
 require_once 'UserLogic.php';
 
+$err = [];
+
 $token = filter_input(INPUT_POST, 'csrf_token');
 
-if (!isset($_SESSION['csrf_token']) || $token !== $_SESSION['csrf_token']) {
+if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_token']) {
     exit('不正なリクエスト');
 }
 
@@ -34,8 +36,9 @@ if (!$hasCreated) {
     </a>
     <h2>新規登録</h2>
     <h3>新規登録が完了しました。</h3>
+    <button onclick="location.href='login_form.php'">ログインする</button><br>
     <button onclick="location.href='home.php'">ホームに戻る</button>
-    <button onclick="location.href='login.php'">ログインする</button>
+
 </body>
 
 </html>
