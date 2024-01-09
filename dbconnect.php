@@ -1,6 +1,6 @@
 <?php
-require_once './env.php';
-function coneect()
+require_once 'env.php';
+function connect()
 {
     $host = DB_HOST;
     $db = DB_NAME;
@@ -14,11 +14,9 @@ function coneect()
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
         ]);
-        echo '接続成功';
+        return $pdo;
     } catch (PDOException $e) {
         echo '接続失敗' . $e->getMessage();
         exit();
     }
 }
-
-echo connect();

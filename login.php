@@ -1,9 +1,38 @@
+<?php
+session_start();
+require_once 'UserLogic.php';
+
+$err = [];
+if (!$email = filter_input(INPUT_POST, 'email')) {
+    $err['email'] = 'メールアドレスを記入してください。';
+}
+
+if (!$password = filter_input(INPUT_POST, 'password')) {
+    $err['password'] = 'パスワードを記入してください。';
+}
+
+if (count($err) > 0) {
+    //エラーがあった戻す
+    $_SESSION = $err;
+    header('Location: login_form.php');
+    return;
+}
+
+//ログイン成功処理
+$result = UserLogic::login($email, $password);
+if (!$result) {
+    header('Location: login_form.php');
+    return;
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 
 <head>
     <meta charset="UTF-8">
-    <title>ログイン</title>
+    <title>ログイン完了</title>
     <link rel="stylesheet" href="css/account.css">
 </head>
 
@@ -12,23 +41,9 @@
         <h1 class="header-logo">NewRCode</h1>
     </a>
     <h2>ログイン</h2>
-    <div id="alert"></div>
-    <form method="POST" action="welcome.html">
-        <h3>ユーザーID</h3>
-        <div class="input-detail">
-            <label class="ef">
-                <input type="email" placeholder="ユーザーID/メールアドレス" required="required"><br>
-            </label>
-        </div>
-        <h3>パスワード</h3>
-        <div class="input-detail">
-            <label class="ef">
-                <input type="password" id="pw1" placeholder="パスワード" minlength="8" maxlength="20" pattern="^[a-zA-Z0-9]+$" required="required"><br></label>
-        </div>
-        <button onclick="location.href='home.html'">ホームに戻る</button>
-        <input type="submit" value="ログイン">
-    </form>
-    <p>はじめての方は<a href="createaccount.html">こちら</a></p>
+    <h3>ログインしました。</h3>
+    <button onclick="location.href='home.html'">ホームに戻る</button>
+    <button onclick="location.href='mypage.php'">マイページへ</button>
 </body>
 
 </html>
