@@ -56,7 +56,7 @@ session_destroy();
     </form>
     <button onclick="location.href='home.php'">ホームに戻る</button>
 
-    <p>はじめての方は<a href="signup_form.php">こちら</a></p>
+    <p id="login">はじめての方は<a href="signup_form.php">こちら</a></p>
 </body>
 
 </html>

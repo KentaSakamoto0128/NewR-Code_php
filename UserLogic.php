@@ -62,16 +62,45 @@ class UserLogic
      * @param string $password
      * @return bool $result
      */
-    public static function signUpCheck($email, $password)
+    public static function signUpCheck($email)
     {
         $result = false;
-        $user = self::getUserByEmail($email, $password);
+        //SQL準備
+        //SQL実行
+        //SQL結果を返す
+        $sql = 'SELECT * FROM users WHERE email = ?';
 
-        if ($user) {
-            $_SESSION['msg'] = 'このメールアドレスは登録済です。';
-            return $result;
-        }
+        $arr = [];
+        $arr[] = $email;
+        $stmt = connect()->prepare($sql);
+        $stmt->execute($arr);
+        $user = $stmt->fetch();
+        $user ? true : false;
+        return $user;
     }
+
+
+    /**
+     * emailが存在するか
+     * @param string $email
+     * @return array|bool $user|$false
+     */
+    public static function CheckEmail($email)
+    {
+        //SQL準備
+        //SQL実行
+        //SQL結果を返す
+        $sql = 'SELECT * FROM users WHERE email = ?';
+
+        $arr = [];
+        $arr[] = $email;
+        $stmt = connect()->prepare($sql);
+        $stmt->execute($arr);
+        $user = $stmt->fetch();
+        return $user ? true : false;
+    }
+
+
 
 
 
@@ -80,7 +109,7 @@ class UserLogic
      * @param string $email
      * @return array|bool $user|$false
      */
-    public static function getUserByEmail($email, $password)
+    public static function getUserByEmail($email)
     {
         //SQL準備
         //SQL実行
