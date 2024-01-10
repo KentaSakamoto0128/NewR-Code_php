@@ -32,11 +32,11 @@ $login_user = $_SESSION['login_user'];
     </p>
     <p id="login">メールアドレス:<?php echo h($login_user['email']) ?>
     </p>
-
-    <button onclick="location.href='home.php'">ホームに戻る</button>
     <form action="logout.php" method="POST">
         <input type="submit" name="logout" value="ログアウト" name="logout">
     </form>
+    <button onclick="location.href='home.php'">ホームに戻る</button>
+
 </body>
 
 </html>

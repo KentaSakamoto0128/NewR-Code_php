@@ -42,8 +42,8 @@ if (!$result) {
     </a>
     <h2>ログイン</h2>
     <h3>ログインしました。</h3>
+    <button onclick="location.href='mypage.php'">マイページへ</button><br>
     <button onclick="location.href='home.php'">ホームに戻る</button>
-    <button onclick="location.href='mypage.php'">マイページへ</button>
 </body>
 
 </html>
