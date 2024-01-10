@@ -23,7 +23,7 @@
         <img class="HtU" src="images/HtUSampleIMG.jpg">
         <p class="HtU">上記画像は挿入時サンプルです。</p>
         <h3 class="HtU">お問い合わせ</h3>
-        <p class="HtU">アカウント削除や不明点のお問い合わせは<a href="">こちら</a></p>
+        <p class="HtU">アカウント削除や不明点のお問い合わせは<a href="https://docs.google.com/forms">こちら</a></p>
     </div>
 
     <button onclick="location.href='home.php'">ホームに戻る</button>
