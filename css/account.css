@@ -199,3 +199,39 @@ fieldset.confirmcb {
 .confirmcb input {
     display: none;
 }
+
+div#info {
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto 20px auto;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+h3.HtU {
+    padding-top: 10px;
+    margin-top: 0;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+p.HtU {
+    margin: 0;
+}
+
+img.HtU {
+    width: 500px;
+    height: auto;
+}
+
+
+@media (max-width: 1000px) {
+    div#info {
+        width: 100%;
+    }
+
+    img.HtU {
+        width: 50%;
+        height: auto;
+    }
+}
