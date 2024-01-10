@@ -12,6 +12,15 @@ if (!isset($_POST['csrf_token']) || $_POST['csrf_token'] !== $_SESSION['csrf_tok
 
 unset($_SESSION['csrf_token']);
 
+$err = [];
+//重複チェック
+$result = UserLogic::signUpCheck($email, $password);
+if (!$result) {
+    $_SESSION['login_err'] = 'このメールアドレスは登録済みです。';
+    header('Location: signup_form.php');
+    return;
+}
+
 //ユーザー登録処理
 $hasCreated = UserLogic::createUser($_POST);
 

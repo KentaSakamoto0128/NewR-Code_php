@@ -56,6 +56,24 @@ class UserLogic
     }
 
 
+    /**
+     * 重複チェック
+     * @param string $email
+     * @param string $password
+     * @return bool $result
+     */
+    public static function signUpCheck($email, $password)
+    {
+        $result = false;
+        $user = self::getUserByEmail($email, $password);
+
+        if ($user) {
+            $_SESSION['msg'] = 'このメールアドレスは登録済です。';
+            return $result;
+        }
+    }
+
+
 
     /**
      * emailからユーザーを取得
