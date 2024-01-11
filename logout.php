@@ -31,7 +31,7 @@ UserLogic::logout();
     <h2>ログアウト</h2>
     <p id="login">ログアウトしました。</p>
 
-    <button onclick="location.href='login_form.php'">ログインする</button>
+    <button onclick="location.href='home.php'">ホームに戻る</button>
 </body>
 
 </html>
