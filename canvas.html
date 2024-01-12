@@ -140,38 +140,37 @@
 
     <div class="sidenav" id="contents1">
         <h2>テキスト</h2>
-        <button id="addText" onclick="addText()">文字を入れる</button>
-        <br>
-        <button class="textDesign" onclick="boldText()"><b>B</b></button>
-        <button class="textDesign" onclick="italicText()"><i>I</i></button>
-        <button class="textDesign" onclick="underlineText()"><u>U</u></button>
-        <button class="textDesign" onclick="slashText()"><s>S</s></button>
-        <br>
-        <br>
-        <hr>
-        枠線
-        <br>
-        幅：
-        <select name="textBorderWidth" id="textBorderWidth">
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-        </select>
-        <br>
-        色：<input type="color" value="#000000" id="textBorderColor">
-        <br>
-        塗りつぶし
-        <br>
-        色：<input type="color" value="#000000" id="textColor">
-        <br>
+        <div class="aligncenter">
+            <button id="addText" onclick="addText()">文字を入れる</button>
+        </div>
+        <div class="aligncenter">
+            <input title="文字色" type="color" value="#000000" id="textColor">
+            <button title="太字" class="textDesign" onclick="boldText()"><b>B</b></button>
+            <button title="斜体" class="textDesign" onclick="italicText()"><i>I</i></button>
+            <button title="下線" class="textDesign" onclick="underlineText()"><u>U</u></button>
+            <button title="中心線" class="textDesign" id="right" onclick="slashText()"><s>S</s></button>
+        </div>
+        <div class="aligncenter">
+            <p>枠線の太さ:</p>
+            <select name="textBorderWidth" id="textBorderWidth">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+        <div class="aligncenter">
+            <p class="borderRight">枠線の色:</p>
+            <input type="color" value="#000000" id="textBorderColor">
+            <br>
+        </div>
     </div>
 
     <div class="sidenav" id="contents2">
