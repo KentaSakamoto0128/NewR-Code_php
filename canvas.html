@@ -422,20 +422,13 @@
     </div>
     <div class="sidenav" id="contents5">
         <h2>リサイズ</h2>
-        <p>縦
-            <input type="number" id="Height">
-            px
-        </p>
-        <p>横
-            <input type="number" id="Width">
-            px
-        </p>
-        <button id="A3" onclick="autoA3()">A3</button>
-        <button id="A4" onclick="autoA4()">A4</button>
-        <button id="A5" onclick="autoA5()">A5</button>
-        <button id="B4" onclick="autoB4()">B4</button>
-        <button id="B5" onclick="autoB5()">B5</button>
-        <button id="Card" onclick="autoCard()">はがき</button>
+
+        <div class="aligncenter">
+            <p>縦
+                <input type="number" id="Height">
+                px
+            </p>
+        </div>
         <button id="swap" onclick="swapWH()">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="16">
                 <path
@@ -443,21 +436,32 @@
                 </path>
             </svg>
         </button>
-        <br>
-        <button onclick="reSize()">変更</button>
-        <br>
-        <hr>
-        <br>
-        <div>
-            <h4>背景</h4>
+        <div class="aligncenter">
+            <p>横
+                <input type="number" id="Width">
+                px
+            </p>
         </div>
-        <div>
-            <span>
-                色：<input type="color" value="#FFFFFF" id="backColor">
-                &emsp;
-                透明：<input type="checkbox" id="backTransparent">
-            </span>
+
+        <div class="aligncenter">
+            <button class="Size" id="A3" onclick="autoA3()">A3</button>
+            <button class="Size" id="A4" onclick="autoA4()">A4</button>
+            <button class="Size" id="A5" onclick="autoA5()">A5</button>
         </div>
+        <div class="aligncenter">
+            <button class="Size" id="B4" onclick="autoB4()">B4</button>
+            <button class="Size" id="B5" onclick="autoB5()">B5</button>
+            <button class="Size" id="Card" onclick="autoCard()">はがき</button>
+        </div>
+        <button id="change" onclick="reSize()">変更</button>
+
+        <div class="aligncenter">
+            <p>背景色:</p><input type="color" value="#FFFFFF" id="backColor">
+        </div>
+        <div class="aligncenter">
+            <p>透明:</p><input type="checkbox" id="backTransparent">
+        </div>
+
     </div>
 
     <div class="sidenav" id="contents6">
