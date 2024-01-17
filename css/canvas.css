@@ -139,6 +139,10 @@ div.aligncenter {
     border: none;
 }
 
+/*ここから*/
+/*htmlはdiv class="sidenav" id="contents4"と
+div class="sidenav" id="contents5"を変更*/
+
 button#addText {
     width: 100%;
     height: 35px;
@@ -280,8 +284,6 @@ input#backTransparent {
     height: 20px;
 }
 
-/**/
-
 select#shapeBorderWidth {
     height: 30px;
     font-size: 20px;
@@ -328,7 +330,7 @@ input#shapeTransparent:hover {
     background-color: #B4B4B4;
 }
 
-/**/
+/*ここまで*/
 
 #movable {
     width: 595px;
